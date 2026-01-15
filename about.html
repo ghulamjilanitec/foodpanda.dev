@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- cdn link icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>About Us</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* navbar starte */
+
+
+    .navbar {
+        height: 64px;
+        padding: 0 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-left img {
+        display: block;
+        object-fit: contain;
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+        margin-right: 24px;
+    }
+
+    .menu a {
+        font-family: poppins;
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #000;
+        line-height: 1;
+    }
+
+    .menu a:hover {
+        color: #ff2b85;
+    }
+
+    /* BUTTON */
+    .location-btn {
+        font-family: poppins;
+        background: #ff2b85;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 600;
+        padding: 15px 16px;
+        border-radius: 999px;
+        line-height: 1;
+        margin-right: 16px;
+    }
+
+    /* SEARCH ICON */
+    .search-icon {
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* nav bar complete */
+
+    /* hero sectio starte*/
+    .hero {
+        position: relative;
+        height: 450px;
+        background-image: url("/assets/images/dilivery\ boy.jfif");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+    .content {
+        position: relative;
+        padding-left: 80px;
+    }
+
+    .content h1 {
+        color: #fff;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    /* hero section complete */
+
+    /* From food delivery to your starte */
+
+    .content-container {
+        max-width: 900px;
+        padding: 40px;
+        color: #000000;
+    }
+
+    h1 {
+        font-family: poppins;
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 30px;
+        letter-spacing: -1px;
+    }
+
+    p {
+        font-family: roboto;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        font-weight: 400;
+        color: #333333;
+    }
+
+    /* From food delivery to your complete */
+
+    /*  Customers come first starte */
+
+    .main-container {
+
+        padding: 30px 100px;
+        background-color: #f7f7f7;
+        gap: 60px;
+    }
+
+    .text-side {
+        max-width: 520px;
+    }
+
+    .pa {
+
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .text-side h1 {
+        text-align: left;
+        font-size: 50px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 25px;
+        line-height: 1.1;
+    }
+
+    .text-side p {
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #444;
+    }
+
+
+
+    .image-side img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+
+    /*  Customers come first complate */
+
+    /* Our values starte */
+    .values-section {
+        padding: 80px 20px;
+        text-align: center;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .values-section h2 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 40px;
+    }
+
+    .values-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pill {
+        padding: 12px 26px;
+        border-radius: 50px;
+        border: 2px solid #e60073;
+        color: #e60073;
+        font-size: 15px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .pill:hover {
+        background: #e60073;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .pill.active {
+        background: #000;
+        border-color: #000;
+        color: #fff;
+    }
+
+    /* our values complate */
+
+
+    /* challenge the status quo starte */
+
+    .con {
+        max-width: 1200px;
+        margin: 80px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .tex {
+        width: 50%;
+    }
+
+    .tex h1 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #2c2c2c;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .tex p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    /* challenge the status quo complate */
+
+    /* join the panda team starte */
+    .teching-section {
+        background: #ffffff;
+        padding: 50px 56px;
+    }
+
+    .teching-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 80px;
+    }
+
+
+
+    .teching-image img {
+        max-width: 600px;
+        display: block;
+    }
+
+    /* RIGHT CONTENT */
+    .teching-content h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .teching-content p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #333;
+        max-width: 500px;
+        margin-bottom: 32px;
+    }
+
+    /* BUTTON */
+    .about-btn {
+        display: inline-block;
+        background: #ff2b85;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 14px 28px;
+        border-radius: 999px;
+    }
+
+    /* join the panda team complate complate */
+
+    /* FOOTER */
+
+    .footer {
+        background: #000;
+        color: #fff;
+        padding: 60px 80px 30px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+
+    .footer-logo img {
+        width: 160px;
+    }
+
+    .footer-col h4,
+    .footer-social h4 {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .footer-col ul {
+        list-style: none;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .footer-col ul li a:hover {
+        color: #ff2b85;
+    }
+
+    .social-icons a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 15px;
+        text-decoration: none;
+    }
+
+    .social-icons a:hover {
+        color: #ff2b85;
+    }
+
+    .footer-bottom {
+        margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        color: #aaa;
+    }
+
+    .footer-bottom a {
+        color: #aaa;
+        text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+        color: #ff2b85;
+    }
+
+    /* FOOTER COMPLATE */
+</style>
+
+<body>
+    <!-- ===== Navbar ===== -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="https://www.foodpanda.com/wp-content/uploads/2023/06/foodpanda_logo_2023.svg" alt="foodpanda">
+    </div>
+
+    <nav class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./newsroom.html">Newsroom</a>
+        <a href="./partners.html">Partners</a>
+        <a href="./panda ads/solution.html">panda ads</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./career/index.html">Careers</a>
+    </nav>
+
+    <div class="nav-right">
+        <button class="location-btn">Choose location</button>
+        <span class="search">🔍</span>
+    </div>
+</nav>
+
+
+    <!--hero section starte -->
+
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>About<br>foodpanda</h1>
+        </div>
+    </section>
+    <!-- hero section complete -->
+
+    <!-- From food delivery to your starte -->
+    <section class="content-container">
+        <h1>From food delivery to your<br>daily convenience companion.</h1>
+
+        <p>A subsidiary of Delivery Hero, foodpanda launched in Singapore in 2014 as a food delivery platform. Dedicated
+            to helping customers get their tasty favourites fast, it quickly won the hearts and minds of customers in
+            APAC.</p>
+
+        <p>Powered by tech and operational excellence, foodpanda has been growing its quick-commerce footprint in more
+            than 400 cities across 11 markets in Asia – Singapore, Hong Kong, Thailand, Malaysia, Pakistan, Taiwan,
+            Philippines, Bangladesh, Laos, Cambodia, and Myanmar.</p>
+
+        <p>Thanks to dedicated partners, riders, and a team united by shared values, foodpanda is now providing millions
+            with a convenient way to get food and groceries in a few taps.</p>
+    </section>
+    <!-- From food delivery to your complate -->
+
+
+    <!-- Customers come first starte -->
+
+    <section class="main-container">
+        <div class="pa">
+            <div class="text-side">
+                <h1>Customers <br> come first</h1>
+                <p>
+                    We're far more than just swift food delivery.
+                    foodpanda enables customers to pick up their
+                    takeaway meals, skip boring grocery trips and send
+                    parcels. Customer needs are the core and centre of
+                    our business. Download the app to experience true
+                    convenience.
+                </p>
+
+            </div>
+
+            <div class="image-side">
+                <img src="" alt="Customers using foodpanda">
+            </div>
+        </div>
+    </section>
+
+    <!-- Customers come first complete -->
+
+    <!-- Our values starte -->
+    <section class="values-section">
+        <h2>Our values</h2>
+
+        <div class="values-wrapper">
+            <span class="pill">prioritise, decide, deliver</span>
+
+            <div class="row">
+                <span class="pill">start with customer, end with customer</span>
+                <span class="pill">own it end-to-end</span>
+            </div>
+
+            <div class="row">
+                <span class="pill active">challenge the status quo</span>
+                <span class="pill">we before me</span>
+            </div>
+
+            <span class="pill">plan for tomorrow, focus on today</span>
+        </div>
+    </section>
+
+    <!-- Our values complete -->
+
+    <!-- challenge the status quo starte -->
+
+    <section class="con">
+        <div class="tex">
+            <h1>challenge the<br>status quo</h1>
+            <p>
+                Our environment is ever-changing and we meet these changes
+                head-on by adopting a progress-driven mindset. We value
+                diverse inputs, we push the envelope to open up possibilities
+                for innovation, growth and ultimately staying ahead – for
+                our customers, for foodpanda, and ourselves.
+            </p>
+        </div>
+
+        <div class="graphic">
+            <img src="assets/images/dis.png" alt="">
+        </div>
+    </section>
+
+    <!-- challenge the status quo complate -->
+
+
+
+    <!-- join the panda team -->
+
+    <!-- Find the job you’d love -->
+    <section class="teching-section">
+        <div class="teching-container">
+
+            <!-- LEFT IMAGE -->
+            <div class="teching-image">
+                <img src="https://www.foodpanda.com/wp-content/uploads/2025/07/fp-home-3.webp" alt="Foodpanda App">
+            </div>
+
+            <!-- RIGHT CONTENT -->
+            <div class="teching-content">
+                <h2>Find the job you’d love</h2>
+
+                <p>
+                    Hungry to make a difference? There’s a seat at our table!
+                    <br><br>
+                    Find out how we connect tech, passions, projects and people – explore international career
+                    opportunities at foodpanda.
+
+
+                </p>
+
+                <a href="#" class="about-btn">Join Us</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- join the panda team complate -->
+
+    <!-- footer starte -->
+    <footer class="footer">
+        <div class="footer-container">
+
+
+            <!-- Navigate -->
+            <!-- Logo -->
+            <div class="footer-logo">
+                <img src="assets/images/logo_food-panda-removebg-preview.png" alt="foodpanda">
+            </div>
+            <div class="footer-col">
+
+
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="contect.html">Contact</a></li>
+                    <li><a href="newsroom.html">Newsroom</a></li>
+                </ul>
+            </div>
+
+            <!-- Collaborate -->
+            <div class="footer-col">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Explore careers</a></li>
+                    <li><a href="#">Become a rider</a></li>
+                    <li><a href="#">Feed your team</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-social">
+                <h4>Follow us on</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>Copyright © 2025 foodpanda</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+</body>
+
+</html>

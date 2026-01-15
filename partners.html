@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <!-- cdn link icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>About Us</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* navbar starte */
+
+
+    .navbar {
+        height: 64px;
+        padding: 0 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-left img {
+        display: block;
+        object-fit: contain;
+    }
+
+    .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        gap: 24px;
+        margin-right: 24px;
+    }
+
+    .menu a {
+        font-family: poppins;
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #000;
+        line-height: 1;
+    }
+
+    .menu a:hover {
+        color: #ff2b85;
+    }
+
+    /* BUTTON */
+    .location-btn {
+        font-family: poppins;
+        background: #ff2b85;
+        color: #fff;
+        text-decoration: none;
+        font-size: 13.5px;
+        font-weight: 600;
+        padding: 15px 16px;
+        border-radius: 999px;
+        line-height: 1;
+        margin-right: 16px;
+    }
+
+    /* SEARCH ICON */
+    .search-icon {
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        display: block;
+    }
+
+    /* nav bar complete */
+
+    /* hero sectio starte*/
+    .hero {
+        position: relative;
+        height: 450px;
+        background-image: url("/assets/images/cd.jfif");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+    .content {
+        position: relative;
+        padding-left: 80px;
+    }
+
+    .content h1 {
+        color: #fff;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    /* hero section complete */
+
+    /* From food delivery to your starte */
+
+    .content-container {
+        max-width: 900px;
+        padding: 40px;
+        color: #000000;
+    }
+
+    .r {
+        font-family: poppins;
+        font-size: 42px;
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 30px;
+        letter-spacing: -1px;
+    }
+
+    p {
+        text-align: center;
+        font-family: roboto;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        font-weight: 400;
+        color: #333333;
+    }
+
+    /* From food delivery to your complete */
+
+    /*  Customers come first starte */
+
+    .main-container {
+       
+        padding: 30px 100px;
+        background-color: #f7f7f7;
+        gap: 60px;
+    }
+
+    .text-side {
+        max-width: 520px;
+    }
+.pa{
+
+     align-items: center;
+        justify-content: center;
+    display: flex;
+}
+    .text-side h1 {
+        text-align: left;
+        font-size: 50px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 25px;
+        line-height: 1.1;
+    }
+
+    .text-side p {
+        text-align: left;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #444;
+    }
+
+
+
+    .image-side img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        object-fit: cover;
+    }
+
+    /*  Customers come first complate */
+
+    /* Our values starte */
+    .values-section {
+        padding: 80px 20px;
+        text-align: center;
+        background: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .values-section h2 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 40px;
+    }
+
+    .values-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .row {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .pill {
+        padding: 12px 26px;
+        border-radius: 50px;
+        border: 2px solid #e60073;
+        color: #e60073;
+        font-size: 15px;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .pill:hover {
+        background: #e60073;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .pill.active {
+        background: #000;
+        border-color: #000;
+        color: #fff;
+    }
+
+    /* our values complate */
+
+
+    /* challenge the status quo starte */
+
+    .con {
+        max-width: 1200px;
+        margin: 80px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .tex {
+        width: 50%;
+    }
+
+    .tex h1 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #2c2c2c;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .tex p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    /* challenge the status quo complate */
+
+    /* join the panda team starte */
+    .teching-section {
+        background: #ffffff;
+        padding: 50px 56px;
+    }
+
+    .teching-container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 80px;
+    }
+
+
+
+    .teching-image img {
+        max-width: 600px;
+        display: block;
+    }
+
+    /* RIGHT CONTENT */
+    .teching-content h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .teching-content p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        color: #333;
+        max-width: 500px;
+        margin-bottom: 32px;
+    }
+
+    /* BUTTON */
+    .about-btn {
+        display: inline-block;
+        background: #ff2b85;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 14px 28px;
+        border-radius: 999px;
+    }
+
+    /* join the panda team complate complate */
+
+    /* Become a restaurant or local shop partner */
+
+    .container {
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    padding: 0 50px;
+}
+
+/* Button Layout */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Button Styling */
+.btn {
+    text-decoration: none;
+    color: #d70f64; /* Foodpanda Pink */
+    border: 2px solid #d70f64;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 140px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e60073; 
+    color: white;   
+}
+
+/* Active Button (Bangladesh style) */
+.btn.active {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+    /* Become a restaurant or local shop partner complate */
+
+
+    /*  would you like to boost custumer reach andrevenue starte */
+.would-you-section {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    gap: 40px; 
+}
+
+.would-you-content-box {
+    flex: 1; 
+    padding: 20px;
+}
+
+h1 {
+    text-align:left;
+    font-size: 48px; /* Bada aur bold heading */
+    font-weight: 800;
+    color: #000;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+p {
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.cta-button {
+    text-align: left;
+    background-color: #ff2b85; 
+    color: white;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e02475;
+}
+
+.image-box {
+    flex: 1; 
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px; 
+    display: block;
+}
+    /*  would you like to boost custumer reach andrevenue complate */
+
+
+/* why partner food panda starte  */
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.w {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 23%;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+.text h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+/* why partner food panda complete */
+
+/* How does it work? */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.e {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.step {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+  flex: 1;
+}
+
+.step img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.step p {
+    font-weight: 800;
+    text-align: center;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.2;
+}
+/* How does it work? complate */
+
+/* Have more questions? Check it out here starte */
+.faq-section {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.faq-section h2 {
+    font-family: poppins;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.faq-item {
+    font-family: poppins;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 22px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+
+.faq-item span {
+    width: 100%;
+    text-align: center;
+}
+
+.faq-item i {
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+}
+
+
+.faq-item:last-child {
+    border-bottom: 1px solid #000;
+}
+/* Have more questions? Check it out here complate */
+
+
+    /* FOOTER */
+
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 60px 80px 30px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.footer-logo img {
+    width: 160px;
+}
+
+.footer-col h4,
+.footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-col ul li a:hover {
+    color: #ff2b85;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff2b85;
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.footer-bottom a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #ff2b85;
+}
+/* FOOTER COMPLATE */
+</style>
+
+<body>
+  <!-- ===== Navbar ===== -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="https://www.foodpanda.com/wp-content/uploads/2023/06/foodpanda_logo_2023.svg" alt="foodpanda">
+    </div>
+
+    <nav class="menu">
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./newsroom.html">Newsroom</a>
+        <a href="./partners.html">Partners</a>
+        <a href="./panda ads/solution.html">panda ads</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./career/index.html">Careers</a>
+    </nav>
+
+    <div class="nav-right">
+        <button class="location-btn">Choose location</button>
+        <span class="search">🔍</span>
+    </div>
+</nav>
+
+
+    <!--hero section starte -->
+
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Get more orders with<br>with foodpanda</h1>
+        </div>
+    </section>
+    <!-- hero section complete -->
+
+   
+
+
+    <!-- Become a restaurant or local shop partner -->
+ <center><div class="container">
+        <h1 class="r">Become a restaurant or local shop partner</h1>
+        <p class="description">
+            Take your business to new heights by partnering with foodpanda, the leading delivery service trusted by businesses large and small. We dare to always go further, helping you reach untapped customer bases, boost order volume, and drive more sales.
+        </p>
+
+        <div class="button-group">
+            <div class="row">
+                <a href="#" class="btn">Malaysia</a>
+                <a href="#" class="btn">Philippines</a>
+                <a href="#" class="btn active">Bangladesh</a>
+                <a href="#" class="btn">Hong Kong</a>
+            </div>
+            <div class="row">
+                <a href="#" class="btn">Pakistan</a>
+                <a href="#" class="btn">Singapore</a>
+                <a href="#" class="btn">Taiwan</a>
+                <a href="#" class="btn">Cambodia</a>
+            </div>
+            <div class="row">
+                <a href="#" class="btn">Laos</a>
+                <a href="#" class="btn">Myanmar</a>
+            </div>
+        </div>
+    </div></center>
+    <!-- Become a restaurant or local shop partner complate -->
+
+
+<!-- would you like to boost custumer reach andrevenue starte -->
+<center><section class="would-you-section">
+        <div class="would-you-content-box">
+            <h1>Would you like to boost customer reach and revenue?</h1>
+            <p>Don't miss out on earnings. Join foodpanda to reach more customers and increase revenue.</p>
+            <a href="#" class="cta-button" >Start now!</a>
+        </div>
+        
+        <div class="image-box">
+            <img src="assets/images/fr.PNG" alt="Market Scene">
+        </div>
+    </section></center>
+
+<!-- would you like to boost custumer reach andrevenue complate -->
+
+
+<!-- why partner With food panda starte -->
+  
+  <div class="container">
+    <h1 class="w">Why partner with foodpanda?</h1>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/images/le.jfif" alt="Reach new customers">
+        <div class="text">
+          <h3>REACH NEW CUSTOMERS</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/len.jfif" alt="Boost your volume">
+        <div class="text">
+          <h3>BOOST YOUR VOLUME</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/lena.jfif" alt="Drive more sales">
+        <div class="text">
+          <h3>DRIVE MORE SALES</h3>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/images/l.jfif" alt="Increase customer satisfaction">
+        <div class="text">
+          <h3>INCREASE CUSTOMER SATISFACTION</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- why partner food panda complete -->
+
+<!-- How does it work? -->
+
+
+      <div class="container">
+    <h1 class="e">How does it work?</h1>
+    <div class="steps">
+      <div class="step">
+        <img src="assets/images/c.webp" alt="Step 1">
+        <p><strong>1.</strong> <br>The customer adds their delivery address in the app or on the website and then selects a store or restaurant in their area.</p>
+      </div>
+      <div class="step">
+        <img src="assets/images/d.webp" alt="Step 2">
+        <p><strong>2.</strong><br>You accept the order with the reading tablet and prepare it for the collection time.</p>
+      </div>
+      <div class="step">
+        <img src="assets/images/e.webp" alt="Step 3">
+        <p><strong>3.</strong><br> A rider will come to you at the specified time and collect the order. It is then delivered directly to the customer!</p>
+      </div>
+      <div class="step">
+        <img src="assets/images/f.webp" alt="Step 4">
+        <p><strong>4.</strong><br> Twice per month you receive payments for the orders you have received via foodora. You automatically receive a basis for the deposit and a detailed insight into your sales statistics.</p>
+      </div>
+    </div>
+  </div>
+<!--How does it work? complate -->
+<!-- Have more questions? Check it out here starte -->
+
+
+<section class="faq-section">
+    <h2>Have more questions? Check it out here</h2>
+
+    <div class="faq-item">
+        <span>How can I receive orders?</span>
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="faq-item">
+        <span> Are there any costs if I register on the site?</span>
+        <i class="fas fa-chevron-right"></i>
+    </div>
+
+    <div class="faq-item">
+        <span>What are the opening hours like?</span>
+        <i class="fas fa-chevron-right"></i>
+    </div>
+</section>
+<!-- Have more questions? Check it out here complate -->
+
+
+    <!-- footer starte -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            
+
+            <!-- Navigate -->
+             
+                <!-- Logo -->
+            <div class="footer-logo">
+                <img src="assets/images/logo_food-panda-removebg-preview.png" alt="foodpanda">
+            </div>
+            <div class="footer-col">
+            
+                <h4>Navigate</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about us.html">About</a></li>
+                    <li><a href="contect.html">Contact</a></li>
+                    <li><a href="newsroom.html">Newsroom</a></li>
+                </ul>
+            </div>
+
+            <!-- Collaborate -->
+            <div class="footer-col">
+                <h4>Collaborate</h4>
+                <ul>
+                    <li><a href="#">Explore careers</a></li>
+                    <li><a href="#">Become a rider</a></li>
+                    <li><a href="#">Feed your team</a></li>
+                </ul>
+            </div>
+
+            <!-- Social -->
+            <div class="footer-social">
+                <h4>Follow us on</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+            <p>Copyright © 2025 foodpanda</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+</body>
+
+</html>
+

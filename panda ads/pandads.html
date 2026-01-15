@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panda Ads Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn link icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 6%;
+            /* Side padding adjust ki hai */
+            background-color: #ffffff;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ff2b85;
+            letter-spacing: -1px;
+            cursor: pointer;
+        }
+
+        .logo span {
+            font-weight: 300;
+            /* 'ads' ko thoda patla kiya hai */
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-items ul {
+            font-family: poppins;
+            margin-right: 80px;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            /* Bold links as per image */
+            font-size: 14px;
+            padding: 25px 15px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-items a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: #ff2b85;
+            border-radius: 0 0 5px 5px;
+            display: block;
+        }
+
+        .contact-btn {
+            background: #ff2b85;
+            color: #fff;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .contact-btn:hover {
+            background: #e62076;
+        }
+
+        .search-area {
+            margin-left: 20px;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* nav complate */
+
+        /* hero starte */
+       .hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Image path check karlein */
+    background-image: url("assets/image/Home/slide.png"); 
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-div {
+    padding-left: 100px;
+    max-width: 600px;
+}
+
+.hero-h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-p {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Button Styling */
+.hero-btn {
+    border: solid transparent;
+    display: inline-block;
+    background-color: white;
+    color: #D70F64; 
+    padding: 12px 35px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.hero-btn a{
+    text-decoration: none ;
+    color: #D70F64;
+}
+
+.hero-btn:hover {
+    background-color: #f2f2f2;
+    transform: scale(1.05);
+}
+        /* hero complate */
+
+
+        /* counter starte */
+.stats-container {
+    margin-top: 60px;
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.main-heading {
+    text-align: center;
+    font-family: poppins;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: #000000;
+    line-height: 1.2;
+}
+
+.stats-grid {
+    font-family: roboto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.number {
+    font-size: 70px;
+    font-weight: 900;
+    color: #000000;
+    margin-bottom: 5px;
+    letter-spacing: -2px;
+}
+
+.label {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    text-transform: lowercase;
+}
+        /* counter complate */
+
+
+        /* Power up your visibility & engagement */
+.features-section {
+    padding: 50px;
+    background-color: rgb(241, 241, 241);
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 90px;
+}
+
+.main-title {
+    font-family: poppins;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #000;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.feature-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-icon {
+    width: 80px; /* Icon ka size */
+    height: auto;
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.feature-card p {
+    font-family: roboto;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+    max-width: 280px; /* Text ki width control karne ke liye */
+}
+        /* Power up your visibility & engagement complate */
+
+        /* 3 section ek sath */
+.solutions-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px; /* left/right space added */
+}
+
+/* MAIN HEADING */
+.main-heading {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 90px;
+    color: #000;
+}
+
+/* ROW */
+.solution-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 120px;
+}
+
+/* reverse layout */
+.solution-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* IMAGE */
+.solution-image {
+    flex: 1;
+}
+
+.solution-image img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* CONTENT */
+.solution-content {
+    flex: 1;
+}
+
+.solution-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+.solution-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn-pink {
+    display: inline-block;
+    background-color: #ff2b85;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.btn-pink:hover {
+    background-color: #e02475;
+}
+        /* 3 section complate */
+
+
+
+ /* Go beyond basic targeting with panda ads  */
+.go {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    margin-top: -150px;
+}
+
+.go-solution-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* image right / text left */
+.go-solution-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* IMAGE SIDE */
+.go-solution-image {
+    flex: 1;
+}
+
+.go-solution-image img {
+    width: 100%;
+    border-radius: 18px;
+}
+
+/* TEXT SIDE */
+.go-solution-content {
+    flex: 1;
+}
+
+.go-solution-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+.go-solution-content p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.go-btn-pink {
+    display: inline-block;
+    background-color: #ff2b85;
+    color: white;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.go-btn-pink:hover {
+    background-color: #e02475;
+}
+
+/*  Go beyond basic targeting with panda ads complate */
+
+
+/* Proven impact with panda ads */
+
+/* SECTION */
+.impact-section {
+    background-color: #f2f2f2;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* HEADING */
+.impact-heading {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 70px;
+}
+
+/* CARDS WRAPPER */
+.impact-cards {
+    margin-left: 100px;
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* CARD */
+.impact-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMAGE */
+.impact-image img {
+    width: 100%;
+    border-radius: 18px;
+    margin-bottom: 20px;
+}
+
+/* TEXT */
+.impact-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.4;
+    color: #000;
+    margin-left: 10px;
+}
+
+/* BUTTON */
+.impact-btn {
+    
+    margin-left: 10px;
+    margin-top: 25px;
+    align-self: flex-start;
+    background: #ff2b85;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 26px;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.impact-btn:hover {
+    background: #e02475;
+}
+
+/* Proven impact with panda ads complate */
+
+ /* What our customers are saying  */
+
+.testimonial-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 20px;
+}
+
+.testimonial-heading {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 90px;
+}
+
+/* ROW */
+.testimonial-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    text-align: center;
+}
+
+/* SINGLE TESTIMONIAL */
+.testimonial {
+    max-width: 340px;
+    margin: 0 auto;
+}
+
+.quote {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.7;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.role {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-height: 50px;
+    object-fit: contain;
+}
+
+
+
+ /* What our customers are saying complate  */
+
+ /* Start advertising with panda ads today! */
+
+.ads-today{
+    background:#fff3f6;
+    padding:50px 60px;
+}
+
+.ads-box{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+/* TEXT */
+.ads-box h2{
+    font-family: poppins;
+    font-size:38px;
+    font-weight:800;
+    color:#000;
+}
+
+/* BUTTON */
+.ads-btn{
+    background:#ff2f7d;
+    color:#fff;
+    padding:16px 36px;
+    border-radius:40px;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.ads-btn:hover{
+    background:#e6286e;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .ads-box{
+        flex-direction:column;
+        text-align:center;
+        gap:25px;
+    }
+
+    .ads-box h2{
+        font-size:28px;
+    }
+}
+
+ 
+/* Start advertising with panda ads today! complate */
+
+/* Brands excelling with us */
+
+.brands {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.brands h2 {
+    font-family: poppins;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.brands-grid img {
+  max-width: 120px;
+  margin: auto;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: 0.3s ease;
+}
+
+.brands-grid img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+/* Brands excelling with us complate */
+
+/* footer */
+
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 40px 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-logo {
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+    padding-bottom: 50px;
+  width: 150px;
+}
+
+.footer-logo span {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-col a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: #ff2b85;
+}
+
+.contact-btn {
+  background: #ff2b85;
+  border: none;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background: #e02673;
+}
+
+.linkedin {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 13px;
+  color: #bbb;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* footer complate */
+</style>
+</head>
+
+<body>
+
+    <!-- nav nbar starte -->
+    <nav class="navbar">
+        <div class="logo">
+            panda <span>ads</span>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="pandaads.html" class="active">Home</a></li>
+                    <li><a href="Solutions.html">Solutions</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="#">Tools</a></li>
+                </ul>
+            </div>
+
+            <div class="button-group">
+                <a href="contect.html"><button class="contact-btn">Contact us</button></a>
+            </div>
+
+            <div class="search-area">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bar complate -->
+
+
+    <!-- hero starte -->
+    <header class="hero">
+        <div class="hero-div">
+            <h1 class="hero-h1">Reach millions <br> With panda ads</h1>
+
+            <p class="hero-p">Advertise with foodpanda and connect with millions of
+                <br>ready-to-shop customers within and beyond the foodpanda app.
+            </p>
+            <button class="hero-btn"><a href="#">Get in touch</a></button>
+        </div>
+    </header>
+
+    <!-- hero complate -->
+
+
+    <!-- counter starte -->
+<center><div class="stats-container">
+    <h1 class="main-heading">Boost your brand with Asia’s largest <br> food and grocery delivery network*</h1>
+    
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="number">125M</div>
+            <div class="label">app downloads</div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="number">11</div>
+            <div class="label">markets</div>
+        </div>
+        
+        <div class="stat-item">
+            <div class="number">400+</div>
+            <div class="label">cities</div>
+        </div>
+    </div>
+</div></center>
+    <!-- counter complate -->
+
+
+    <!-- Power up your visibility & engagement starte -->
+<center><section class="features-section">
+    <h1 class="main-title">Power up your visibility & engagement</h1>
+    
+    <div class="features-grid">
+        <div class="feature-card">
+            <img src="assets/image/Home/power up 1 img.png" alt="Reach" class="feature-icon">
+            <h3>Maximise your reach</h3>
+            <p>Amplify your campaign by connecting with your target customers right where they shop</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="assets/image/Home/power 2 img.png" alt="Engage" class="feature-icon">
+            <h3>Engage high-value audiences</h3>
+            <p>Leverage our first-party data and advanced targeting to connect with the right audience</p>
+        </div>
+
+        <div class="feature-card">
+            <img src="assets/image/Home/power 3 img.png" alt="Support" class="feature-icon">
+            <h3>Get personalised support</h3>
+            <p>Achieve your marketing goals and drive growth with personalised support, insights, and more</p>
+        </div>
+    </div>
+</section></center>
+
+
+    <!-- Power up your visibility & engagement complate -->
+
+
+<!-- 3 section ek sath -->
+
+<section class="solutions-container">
+    <h1 class="main-heading">Customised retail media advertising solutions for your brand's needs</h1>
+
+    <div class="solution-row">
+        <div class="solution-image">
+            <img src="assets/image/Home/home mobile.png" alt="In-app advertising">
+        </div>
+        <div class="solution-content">
+            <h2>In-app advertising</h2>
+            <p>Increase brand visibility with native display ads across different categories on the foodpanda app</p>
+            <a href="#" class="btn-pink">Explore solutions</a>
+        </div>
+    </div>
+
+    <div class="solution-row reverse">
+        <div class="solution-image">
+            <img src="assets/image/Home/home bag.png" alt="Off-app advertising">
+        </div>
+        <div class="solution-content">
+            <h2>Off-app advertising</h2>
+            <p>Amplify your campaigns with foodpanda, from email marketing and social media to rider bag ads and product sampling</p>
+            <a href="#" class="btn-pink">Explore solutions</a>
+        </div>
+    </div>
+
+    <div class="solution-row">
+        <div class="solution-image">
+            <img src="assets/image/Home/home other.png" alt="Strategic partnerships">
+        </div>
+        <div class="solution-content">
+            <h2>Strategic partnerships</h2>
+            <p>Execute integrated campaigns for maximum impact, with tailored solutions like vouchers, data partnerships and consumer insights</p>
+            <a href="#" class="btn-pink">Explore solutions</a>
+        </div>
+    </div>
+</section>
+<!-- 3 section ek sath  complate -->
+
+<section class="go">
+
+    <div class="go-solution-row reverse">
+        <div class="go-solution-image">
+            <img src="assets/image/Home/table img.png" alt="Off-app advertising">
+        </div>
+
+        <div class="go-solution-content">
+            <h2>Go beyond basic targeting with panda ads</h2>
+            <p>
+                Maximise your ROI and connect with a broader, more relevant
+                audience through precise targeting powered by our first-party data.
+            </p>
+            <a href="#" class="go-btn-pink">Explore solutions</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- Go beyond basic targeting with panda ads complate -->
+
+<!-- Proven impact with panda ads -->
+
+<section class="impact-section">
+    <h2 class="impact-heading">Proven impact with panda ads</h2>
+
+    <div class="impact-cards">
+
+        <!-- CARD 1 -->
+        <div class="impact-card">
+            <div class="impact-image">
+                <img src="assets/image/Home/provin 1.jpeg" alt="Coca-Cola">
+            </div>
+            <h3>Coca-Cola leveraged retail media channels to boost sales and drive growth</h3>
+            <a href="#" class="impact-btn">Read more</a>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="impact-card">
+            <div class="impact-image">
+                <img src="assets/image/Home/provin 2.jpeg" alt="Mars Wrigley">
+            </div>
+            <h3>Mars Wrigley finds the perfect audience for its new product with panda ads</h3>
+            <a href="#" class="impact-btn">Read more</a>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="impact-card">
+            <div class="impact-image">
+                <img src="assets/image/Home/provin 3.jpeg" alt="Amazon Prime Video">
+            </div>
+            <h3>Amazon Prime Video and foodpanda’s impressive entertainment strategy</h3>
+            <a href="#" class="impact-btn">Read more</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Proven impact with panda ads complate -->
+
+
+<!-- What our customers are saying -->
+
+<section class="testimonial-section">
+
+    <h2 class="testimonial-heading">What our customers are saying</h2>
+
+    <div class="testimonial-row">
+
+        <!-- TESTIMONIAL 1 -->
+        <div class="testimonial">
+            <p class="quote">
+                “We were looking for a large APAC-wide partner with premium O&O
+                mobile ad inventory that could connect us to our target audiences.
+                panda ads were able to be that partner and have delivered beyond
+                our campaign's target KPIs. We look forward to expanding our
+                business with them.”
+            </p>
+
+            <p class="name">Luke Addison</p>
+            <p class="role">Managing Director</p>
+
+            <img src="assets/image/Home/logo1.png" alt="Egentic" class="logo">
+        </div>
+
+        <!-- TESTIMONIAL 2 -->
+        <div class="testimonial">
+            <p class="quote">
+                “As one of the goals from 2023 was to accelerate quick commerce
+                growth through new activations and media, tapping into panda ads
+                has helped us grow our quick commerce business and deliver on
+                our KPIs.”
+            </p>
+
+            <p class="name">Jayson Lopez</p>
+            <p class="role">Senior Media and Digital Marketing Manager</p>
+
+            <img src="assets/image/Home/logo 2.png" alt="Universal Robin" class="logo">
+        </div>
+
+        <!-- TESTIMONIAL 3 -->
+        <div class="testimonial">
+            <p class="quote">
+                “The collaboration with foodpanda through panda ads greatly
+                enhanced our customer acquisition initiatives, by capturing
+                our audience’s interest and fostering heightened user engagement.”
+            </p>
+
+            <p class="name">Jessica Faye Tan</p>
+            <p class="role">Head of Commercial</p>
+
+            <img src="assets/image/Home/logo 3.png" alt="Moneymax" class="logo">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- What our customers are saying complate -->
+
+
+<!-- Start advertising with panda ads today! -->
+
+
+<section class="ads-today">
+    <div class="ads-box">
+        <h2>Start advertising with panda ads today!</h2>
+        <a href="#" class="ads-btn">Get in touch!</a>
+    </div>
+</section>
+
+<!-- Start advertising with panda ads today! complate -->
+
+
+<!-- Brands excelling with us -->
+
+<section class="brands">
+  <h2>Brands excelling with us</h2>
+
+  <div class="brands-grid">
+    <img src="assets/image/Home/1.png" alt="Amazon">
+    <img src="assets/image/Home/2.png" alt="Heineken">
+    <img src="assets/image/Home/3.png" alt="Netflix">
+    <img src="assets/image/Home/4.png" alt="Samsung">
+    <img src="assets/image/Home/5.png" alt="Citi">
+    <img src="assets/image/Home/6.png" alt="Huawei">
+    <img src="assets/image/Home/7.png" alt="Mastercard">
+    <img src="assets/image/Home/8.png" alt="Unilever">
+    <img src="assets/image/Home/9.png" alt="Coca Cola">
+    <img src="assets/image/Home/10.png" alt="P&G">
+    <img src="assets/image/Home/11.png" alt="Standard Chartered">
+    <img src="assets/image/Home/12.png" alt="Visa">
+    <img src="assets/image/Home/13.png" alt="Mars">
+    <img src="assets/image/Home/14.png" alt="GCash">
+    <img src="assets/image/Home/15.png" alt="Zalora">
+    <img src="assets/image/Home/16.png" alt="Disney+">
+  </div>
+</section>
+
+<!-- Brands excelling with us complate -->
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="assets/image/Home/logo-white.svg" alt="foodpanda" width="">
+     <!-- Our company -->
+    <div class="footer-col">
+      <h4>Our company</h4>
+      <a href="#">About foodpanda</a>
+      <a href="#">Privacy policy</a>
+    </div>
+    </div>
+
+   
+
+    <!-- Panda ads -->
+    <div class="footer-col">
+      <h4>panda ads</h4>
+      <a href="#">Retail media solutions</a>
+      <a href="#">Media kit generator</a>
+      <a href="#">Case studies</a>
+      <a href="#">Industry insights</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Pau-Pau marketer personality quiz</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Get in touch!</h4>
+      <button class="contact-btn">Contact us</button>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Follow us on</h4>
+      <a href="#" class="linkedin">in</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Copyright © 2026 foodpanda
+  </div>
+</footer>
+
+<!-- footer compalte -->
+</body>
+
+</html>

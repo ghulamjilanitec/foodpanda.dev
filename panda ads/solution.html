@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panda Ads Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn link icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 6%;
+            /* Side padding adjust ki hai */
+            background-color: #ffffff;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ff2b85;
+            letter-spacing: -1px;
+            cursor: pointer;
+        }
+
+        .logo span {
+            font-weight: 300;
+            /* 'ads' ko thoda patla kiya hai */
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-items ul {
+            font-family: poppins;
+            margin-right: 80px;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            /* Bold links as per image */
+            font-size: 14px;
+            padding: 25px 15px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-items a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: #ff2b85;
+            border-radius: 0 0 5px 5px;
+            display: block;
+        }
+
+        .contact-btn {
+            background: #ff2b85;
+            color: #fff;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .contact-btn:hover {
+            background: #e62076;
+        }
+
+        .search-area {
+            margin-left: 20px;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* nav complate */
+
+/* Hero Section */
+.hero {
+    padding: 80px 6%;
+    background-color: rgb(245, 245, 245)
+}
+
+.hero-container {
+    max-width: 1200px;
+}
+
+.hero h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 6%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+
+/* hero sectionn end */
+
+/* Reach high-value customers section */
+
+
+
+.ads-section{
+    padding:90px 80px;
+    text-align:center;
+}
+
+.ads-section h1{
+    font-family: poppins;
+    font-size:35px;
+    font-weight:700;
+    margin-bottom:30px;
+    color:#000;
+}
+
+.ads-container{
+    display:flex;
+    justify-content:center;
+    gap:80px;          /* cards ke darmiyan zyada space */
+    flex-wrap:wrap;
+}
+
+/* Card size bari */
+.ad-card{
+    max-width:350px;   /* pehle 320px tha */
+    text-align:center;
+}
+
+/* Image size bari */
+.ad-card img{
+    width:100%;
+    max-height:620px;  /* pehle 520px tha */
+    object-fit:contain;
+    margin-bottom:25px;
+}
+
+.ad-card h3{
+    font-size:18px;
+    font-family: poppins;
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+.ad-card p{
+    font-family: poppins;
+    font-size:13px;
+    color:#555;
+    line-height:1.7;
+}
+/* Reach high-value customers section complate */
+
+
+
+/* Boost in-app consideration and conversions */
+
+/* Section */
+.boost-section{
+    background-color: rgb(245, 245, 245);
+    padding:90px 100px;
+}
+
+/* Heading */
+.boost-section h1{
+    font-family: poppins;
+    text-align:center;
+    font-size:35px;
+    font-weight:700;
+    margin-bottom:35px;
+}
+
+/* Pills */
+.pill-wrapper{
+    display:flex;
+    font-family: poppins;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-bottom:80px;
+}
+
+.pill{
+    padding:10px 22px;
+    border:1.5px solid #ff2d7a;
+    border-radius:30px;
+    font-size:14px;
+    color:#ff2d7a;
+    cursor:pointer;
+}
+
+.pill:hover{
+    background-color:#ff2d7a;
+    color:#fff;
+}
+
+/* Content layout */
+.boost-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+/* Left text */
+.text-area{
+    max-width:420px;
+}
+
+.text-area h2{
+    font-family: poppins;
+    font-size:37px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.text-area p{
+    font-family: poppins;
+    font-size:16px;
+    color:#555;
+    line-height:1.7;
+}
+
+/* Right image */
+.image-area img{
+    margin-left: 250px;
+    max-width:800px;
+    width:70%;
+}
+
+/* Responsive */
+@media(max-width:992px){
+    .boost-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .text-area{
+        max-width:100%;
+    }
+}
+
+/* Boost in-app consideration and conversions complate */
+
+/* Get your custom  */
+
+/* Section */
+.cta-section{
+    background:#fafafa;
+    padding:90px 120px;
+}
+
+/* Layout */
+.cta-content{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+/* Text */
+.cta-text{
+    max-width:520px;
+}
+
+.cta-text h1{
+    font-size:48px;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.cta-text p{
+    font-size:16px;
+    color:#555;
+    line-height:1.7;
+    margin-bottom:35px;
+}
+
+/* Button */
+.cta-btn{
+    display:inline-block;
+    background:#ff2d7a;
+    color:#fff;
+    padding:14px 34px;
+    border-radius:30px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.cta-btn:hover{
+    background:#e0266c;
+}
+
+/* Image */
+.cta-image img{
+    max-width:420px;
+    width:100%;
+}
+
+/* Responsive */
+@media(max-width:992px){
+    .cta-content{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .cta-text{
+        max-width:100%;
+    }
+
+    .cta-image img{
+        max-width:320px;
+    }
+}
+
+/* Get your custom  complate*/
+
+/* footer */
+
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 40px 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-logo {
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+    padding-bottom: 50px;
+  width: 150px;
+}
+
+.footer-logo span {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-col a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: #ff2b85;
+}
+
+.contact-btn {
+  background: #ff2b85;
+  border: none;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background: #e02673;
+}
+
+.linkedin {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 13px;
+  color: #bbb;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* footer complate */
+</style>
+</head>
+
+<body>
+
+    <!-- nav nbar starte -->
+    <nav class="navbar">
+        <div class="logo">
+            panda <span>ads</span>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="pandaads.html" class="active">Home</a></li>
+                    <li><a href="Solutions.html">Solutions</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Tools</a></li>
+                </ul>
+            </div>
+
+            <div class="button-group">
+                <a href="contect.html"><button class="contact-btn">Contact us</button></a>
+            </div>
+
+            <div class="search-area">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- nav nbar complate -->
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-container">
+        <h1>Boost your brand with our retail media solutions</h1>
+        <p>
+            Harness the power of first-party retail data to connect with
+            millions of high-value customers within and beyond the app.
+        </p>
+    </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Reach high-value customers  -->
+
+
+    <section class="ads-section">
+
+    <h1>Reach high-value customers <br> with in-app display ads</h1>
+
+    <div class="ads-container">
+
+        <!-- Card 1 -->
+        <div class="ad-card">
+            <img src="assets/image/solution/mobile 1.png" alt="Homescreen Ad">
+            <h3>Homescreen ad</h3>
+            <p>Reach millions of customers at the beginning of their purchase journey</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="ad-card">
+            <img src="assets/image/solution/mobile 2.png" alt="Order Tracking Ad">
+            <h3>Order tracking page ad</h3>
+            <p>Drive engagement and results without disrupting their ordering experience</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ad-card">
+            <img src="assets/image/solution/mobile 3.png" alt="Shopping Ad">
+            <h3>Shopping ad</h3>
+            <p>Boost conversion on pandamart and foodpanda shops</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Reach high-value customers  complate -->
+
+<!-- Boost in-app consideration and conversions -->
+<section class="boost-section">
+
+    <!-- Heading -->
+    <h1>Boost in-app consideration and conversions</h1>
+
+    <!-- Pills -->
+    <div class="pill-wrapper">
+        <span class="pill">Full-page pop-up</span>
+        <span class="pill active">Carousel banner</span>
+        <span class="pill">Cart upsell</span>
+        <span class="pill">Payment switch</span>
+    </div>
+
+    <!-- Content -->
+    <div class="boost-content">
+
+        <!-- Left text -->
+        <div class="text-area">
+            <h2>Carousel banner</h2>
+            <p>
+                A unique solution that helps drive consideration & conversion
+                for brands
+            </p>
+        </div>
+
+        <!-- Right image -->
+        <div class="image-area">
+            <img src="assets/image/solution/wall papper.png" alt="Mobile Carousel">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Boost in-app consideration and conversions complate -->
+
+<!-- Amplify your campaigns  -->
+
+<section class="ads-section">
+
+    <h1>Amplify your campaigns  <br> with off-app advertising solutions</h1>
+
+    <div class="ads-container">
+
+        <!-- Card 1 -->
+        <div class="ad-card">
+            <img src="assets/image/solution/mobile 6.png" alt="Homescreen Ad">
+            <h3>Marketing channels</h3>
+            <p>Extend your reach with foodpanda’s digital networks</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="ad-card">
+            <img src="assets/image/solution/mobile 7.png" alt="Order Tracking Ad">
+            <h3>Rider bags</h3>
+            <p>Put your brand in the fast lane with O2O campaigns</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="ad-card">
+            <img src="assets/image/solution/mobile8.png" alt="Shopping Ad">
+            <h3>Product sampling</h3>
+            <p>Boost product awareness and drive sales</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Amplify your campaigns  complate-->
+
+<!-- Get your custom -->
+
+<section class="cta-section">
+
+    <div class="cta-content">
+
+        <!-- Left Content -->
+        <div class="cta-text">
+            <h1>
+                Get your custom <br>
+                panda ads media kit
+            </h1>
+
+            <p>
+                Share your next campaign with us and receive a tailored media kit
+                straight to your inbox – easy peasy!
+            </p>
+
+            <a href="#" class="cta-btn">Get started</a>
+        </div>
+
+        <!-- Right Image -->
+        <div class="cta-image">
+            <img src="assets/image/solution/mizail.png" alt="Panda Rocket">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Get your custom complate -->
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="assets/image/Home/logo-white.svg" alt="foodpanda" width="">
+     <!-- Our company -->
+    <div class="footer-col">
+      <h4>Our company</h4>
+      <a href="#">About foodpanda</a>
+      <a href="#">Privacy policy</a>
+    </div>
+    </div>
+
+   
+
+    <!-- Panda ads -->
+    <div class="footer-col">
+      <h4>panda ads</h4>
+      <a href="#">Retail media solutions</a>
+      <a href="#">Media kit generator</a>
+      <a href="#">Case studies</a>
+      <a href="#">Industry insights</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Pau-Pau marketer personality quiz</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Get in touch!</h4>
+      <button class="contact-btn">Contact us</button>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Follow us on</h4>
+      <a href="#" class="linkedin">in</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Copyright © 2026 foodpanda
+  </div>
+</footer>
+
+<!-- footer compalte -->
+</body>
+
+</html>

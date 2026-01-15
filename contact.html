@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panda Ads Navbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cdn link icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 6%;
+            /* Side padding adjust ki hai */
+            background-color: #ffffff;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #ff2b85;
+            letter-spacing: -1px;
+            cursor: pointer;
+        }
+
+        .logo span {
+            font-weight: 300;
+            /* 'ads' ko thoda patla kiya hai */
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-items ul {
+            font-family: poppins;
+            margin-right: 80px;
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+            /* Bold links as per image */
+            font-size: 14px;
+            padding: 25px 15px;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-items a:hover::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background-color: #ff2b85;
+            border-radius: 0 0 5px 5px;
+            display: block;
+        }
+
+        .contact-btn {
+            background: #ff2b85;
+            color: #fff;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        .contact-btn:hover {
+            background: #e62076;
+        }
+
+        .search-area {
+            margin-left: 20px;
+        }
+
+        .search-icon {
+            font-size: 20px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* nav complate */
+
+
+/* ================= CONTACT HERO ================= */
+.contact-section{
+    position:relative;
+    background:
+        linear-gradient(rgba(255,43,133,0.85), rgba(169,58,107,0.9)),
+        url("assets/image/solution/contact-bg.jpg") center/cover no-repeat;
+    padding:100px 6% 160px;
+    color:#fff;
+}
+
+.contact-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.contact-text{
+    max-width:520px;
+}
+
+.contact-text h1{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+.contact-text p{
+    font-size:15px;
+    line-height:1.6;
+}
+
+.contact-hero-img img{
+    max-width:300px;
+}
+
+/* ================= FORM ================= */
+.form-wrapper{
+    background:#fff;
+    max-width:900px;
+    margin:200px auto 80px;
+    padding:35px;
+    border-radius:8px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+input, select{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:4px;
+    font-size:14px;
+    width:100%;
+}
+
+.full{
+    grid-column:span 2;
+}
+
+.submit-btn{
+    justify-self:end;
+    background:#ff2b85;
+    color:#fff;
+    border:none;
+    padding:12px 30px;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.submit-btn:hover{
+    background:#e02673;
+}
+
+/* footer */
+
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 40px 30px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.footer-logo {
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-logo img {
+    padding-bottom: 50px;
+  width: 150px;
+}
+
+.footer-logo span {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.footer-col h4 {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.footer-col a {
+  display: block;
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer-col a:hover {
+  color: #ff2b85;
+}
+
+.contact-btn {
+  background: #ff2b85;
+  border: none;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background: #e02673;
+}
+
+.linkedin {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  font-size: 13px;
+  color: #bbb;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+/* footer complate */
+</style>
+</head>
+
+<body>
+
+    <!-- nav nbar starte -->
+    <nav class="navbar">
+        <div class="logo">
+            panda <span>ads</span>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-items">
+                <ul>
+                    <li><a href="pandaads.html" class="active">Home</a></li>
+                    <li><a href="Solutions.html">Solutions</a></li>
+                    <li><a href="Resources.html">Resources</a></li>
+                    <li><a href="Tools.html">Tools</a></li>
+                </ul>
+            </div>
+
+            <div class="button-group">
+                <button class="contact-btn">Contact us</button>
+            </div>
+
+            <div class="search-area">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- nav nbar complate -->
+
+<!-- CONTACT HERO -->
+<section class="contact-section">
+    <div class="contact-inner">
+        <div class="contact-text">
+            <h1>Get in touch</h1>
+            <p>
+                Explore how panda ads can help boost your brand and connect you with millions of customers.
+                Fill in the form below and we’ll be in touch soon.
+            </p>
+        </div>
+
+        <div class="contact-hero-img">
+        </div>
+    </div>
+</section>
+
+<!-- FORM -->
+<div class="form-wrapper">
+    <form>
+        <input type="text" placeholder="Company">
+        <select><option>Country Phone Prefix</option></select>
+
+        <input type="text" placeholder="Job Title">
+        <input type="text" placeholder="Mobile">
+
+        <input type="text" placeholder="First Name">
+        <select><option>Industry</option></select>
+
+        <input type="text" placeholder="Last Name">
+        <select><option>Country</option></select>
+
+        <input class="full" type="email" placeholder="Email">
+        <input class="full" type="text" placeholder="City">
+
+        <button class="submit-btn">Submit</button>
+    </form>
+</div>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo -->
+    <div class="footer-logo">
+      <img src="assets/image/Home/logo-white.svg" alt="foodpanda" width="">
+     <!-- Our company -->
+    <div class="footer-col">
+      <h4>Our company</h4>
+      <a href="#">About foodpanda</a>
+      <a href="#">Privacy policy</a>
+    </div>
+    </div>
+
+   
+
+    <!-- Panda ads -->
+    <div class="footer-col">
+      <h4>panda ads</h4>
+      <a href="#">Retail media solutions</a>
+      <a href="#">Media kit generator</a>
+      <a href="#">Case studies</a>
+      <a href="#">Industry insights</a>
+      <a href="#">Newsroom</a>
+      <a href="#">Pau-Pau marketer personality quiz</a>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Get in touch!</h4>
+      <button class="contact-btn">Contact us</button>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Follow us on</h4>
+      <a href="#" class="linkedin">in</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Copyright © 2026 foodpanda
+  </div>
+</footer>
+
+<!-- footer compalte -->
+</body>
+
+</html>
